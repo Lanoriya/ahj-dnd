@@ -1,0 +1,27 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-case-declarations": "off",
+    "no-redeclare": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/recommended"],
+      "rules": { "jest/prefer-expect-assertions": "off" }
+    }
+  ]
+}
